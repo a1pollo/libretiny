@@ -62,7 +62,7 @@ void attachInterruptParam(pin_size_t interruptNumber, voidFuncPtrParam callback,
 #if LT_RTL8720C
 			event = IRQ_FALL_RISE;
 #else
-			LT_W("CHANGE interrupts not supported");
+			event = IRQ_RISE; //hack
 #endif
 			break;
 		default:
